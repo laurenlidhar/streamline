@@ -59,34 +59,49 @@
             border-radius: 5px;
             cursor: pointer;
             background-size: cover;
+            background-color: transparent;
+            transition: background-image 0.3s ease;
+
+        }
+
+        .streamers-container button:hover {
+            background-image: var(--hover-image); 
+            background-color: transparent;
         }
 
         .netflix-button {
             background-image: url('./assets/netflix.png');
+            --hover-image: url('./assets/netflix.png');
         }
 
         .disney-button {
             background-image: url('./assets/disney.png');
+            --hover-image: url('./assets/disney.png');
         }
 
         .apple-button {
-            background-image: url('./assets/apple.png');
+            background-image: url('./assets/apple2.png');
+            --hover-image: url('./assets/apple2.png');
         }
 
         .hulu-button {
             background-image: url('./assets/hulu.png');
+            --hover-image: url('./assets/hulu.png');
         }
 
         .paramount-button {
             background-image: url('./assets/paramount.png');
+            --hover-image: url('./assets/paramount.png');
         }
 
         .peacock-button {
             background-image: url('./assets/peacock.png');
+            --hover-image: url('./assets/peacock.png');
         }
 
         .prime-button {
             background-image: url('./assets/prime.png');
+            --hover-image: url('./assets/prime.png');
         }
 
     </style>
