@@ -29,7 +29,7 @@ function fetchMovies() {
         <h2>${movie.title}</h2>
         <p>Release Date: ${movie.release_date}</p>
         <p>Rating: ${movie.vote_average}</p>
-        <p>${movie.overview}</p>
+        <p class="overview">${movie.overview}</p>
       `;
   
       moviesContainer.appendChild(movieElement);
