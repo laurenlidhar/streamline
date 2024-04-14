@@ -25,11 +25,19 @@ function fetchMovies() {
       const movieElement = document.createElement('div');
       movieElement.classList.add('movie');
   
+      // Construct the full URL for the poster image
+      const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  
       movieElement.innerHTML = `
-        <h2>${movie.title}</h2>
-        <p>Release Date: ${movie.release_date}</p>
-        <p>Rating: ${movie.vote_average}</p>
-        <p class="overview">${movie.overview}</p>
+        <div class="poster-container">
+          <img src="${posterUrl}" alt="${movie.title} Poster">
+        </div>
+        <div class="movie-details">
+          <h2>${movie.title}</h2>
+          <p>Release Date: ${movie.release_date}</p>
+          <p>Rating: ${movie.vote_average}</p>
+          <p class="overview">${movie.overview}</p>
+        </div>
       `;
   
       moviesContainer.appendChild(movieElement);
