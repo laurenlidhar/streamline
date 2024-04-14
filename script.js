@@ -25,25 +25,20 @@ function fetchMovies() {
       const movieElement = document.createElement('div');
       movieElement.classList.add('movie');
   
+      // Construct the full URL for the poster image
       const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-      const movieDetails = `
-        <h2>${movie.title}</h2>
-        <p>Release Date: ${movie.release_date}</p>
-        <p>Rating: ${movie.vote_average}</p>
-        <p class="overview">${movie.overview}</p>
-      `;
   
       movieElement.innerHTML = `
         <div class="poster-container">
           <img src="${posterUrl}" alt="${movie.title} Poster">
         </div>
-        <div class="movie-details">${movieDetails}</div>
+        <div class="movie-details">
+          <h2>${movie.title}</h2>
+          <p>Release Date: ${movie.release_date}</p>
+          <p>Rating: ${movie.vote_average}</p>
+          <p class="overview">${movie.overview}</p>
+        </div>
       `;
-  
-      // After adding movie element to DOM, set the height of movie details container
-      const posterImage = movieElement.querySelector('.poster-container img');
-      const movieDetailsContainer = movieElement.querySelector('.movie-details');
-      movieDetailsContainer.style.height = `${posterImage.clientHeight}px`;
   
       moviesContainer.appendChild(movieElement);
     });
