@@ -104,25 +104,27 @@
             --hover-image: url('./assets/prime-hover.png');
         }
 
+        .movies-container {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
         .movie {
+        width: calc(25% - 20px); /* Adjust the width as needed */
+        margin: 10px;
+        padding: 10px;
         border: 1px solid #ccc;
-        padding: 20px;
-        margin-bottom: 20px;
         border-radius: 5px;
         }
 
         .movie h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-        }
-
-        .movie p {
+        font-size: 18px;
         margin-bottom: 5px;
         }
 
-        .movie .overview {
-        font-style: italic;
-        color: #666;
+        .movie p {
+        font-size: 14px;
+        margin-bottom: 3px;
         }
 
 
@@ -151,7 +153,7 @@
     
     <p style="text-align: left; text-indent: 40px;">Popular Movies:</p>
 
-    <div id="movies-container">
+    <div class="movies-container">
         <!-- Movie data will be displayed here -->
     </div>
 

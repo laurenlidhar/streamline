@@ -18,7 +18,7 @@ function fetchMovies() {
   }
   
   function handleMovieData(data) {
-    const moviesContainer = document.getElementById('movies-container');
+    const moviesContainer = document.querySelector('.movies-container');
     moviesContainer.innerHTML = '';
   
     data.results.forEach(movie => {
