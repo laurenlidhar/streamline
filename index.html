@@ -46,26 +46,19 @@
             margin-top: 40px;
         }
 
-        .streamers-container img{
-            width: 100px; 
-            height: 100px; 
-            display: inline-block; 
-            margin: 40px;
+        .streamers-container {
+            text-align: center;
+            margin-top: 40px;
         }
 
-        .login-button {
-            position: absolute;
-            top: 230px; 
-            left: 7%; 
-            transform: translateX(-50%);
-
-            display: block;
+        .streamers-container button {
             width: 100px;
             height: 100px;
-            background-color: transparent; /* Red color for the button */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Cursor style */
+            margin: 0 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-size: cover;
         }
 
         .netflix-button {
@@ -96,8 +89,6 @@
             background-image: url('./assets/prime.png');
         }
 
-
-
     </style>
     <script src="script.js" defer></script>
 </head>
@@ -109,30 +100,6 @@
 
     <p style="text-align: left; text-indent: 40px;">What would you like to watch today?</p>
 
-    <div class="streamers-container">
-        <img src="./assets/netflix.png"/>
-        <img src="./assets/disney.png"/>
-        <img src="./assets/apple.png"/>
-        <img src="./assets/hulu.png"/>
-        <img src="./assets/paramount.png"/>
-        <img src="./assets/peacock.png"/>
-        <img src="./assets/prime.png"/>
-    </div>
-
-    <button class="login-button" onclick="window.location.href='https://www.netflix.com/login'"></button>
-
-    <button class="login-button" style="top: 230px; left: 20.5%;" onclick="window.location.href='https://www.disneyplus.com/'"></button>
-    
-    <button class="login-button" style="top: 230px; left: 34%;" onclick="window.location.href='https://www.apple.com/ca/apple-tv-plus/'"></button>
-    
-    <button class="login-button" style="top: 230px; left: 48%;" onclick="window.location.href='https://www.hulu.com/'"></button>
-    
-    <button class="login-button" style="top: 230px; left: 61%;" onclick="window.location.href='https://www.paramountplus.com/ca/'"></button>
-
-    <button class="login-button" style="top: 230px; left: 75%;" onclick="window.location.href='https://www.peacocktv.com/'"></button>
-    
-    <button class="login-button" style="top: 230px; left: 88%;" onclick="window.location.href='https://www.primevideo.com/'"></button>
-    
     <div class="streamers-container">
         <button class="netflix-button" onclick="window.location.href='https://www.netflix.com/login'"></button>
         <button class="disney-button" onclick="window.location.href='https://www.disneyplus.com/'"></button>
