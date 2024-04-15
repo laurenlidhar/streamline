@@ -34,6 +34,27 @@
             line-height: 25px;
         }
 
+        .back-container {
+            display: flex;
+            justify-content: left; 
+        }
+
+        .back-container button{
+            width: 100x; 
+            height: 100px; 
+            margin-top: 20px;
+        }
+
+        .back-container button:hover {
+            background-image: var(--hover-image); 
+            background-color: transparent;
+        }
+
+        .back-button {
+            background-image: url('./assets/back.png');
+            --hover-image: url('./assets/back-hover.png');
+        }
+
         .animation-movies-container {
         display: flex;
         flex-wrap: wrap;
@@ -106,6 +127,10 @@
 
 </head>
 <body>
+    <div class="back-container">
+        <button class="back-button" onclick="redirectTo('index.html')"></button>
+    </div>
+
     <h1>Animation Movies</h1>
 
     <div class="animation-movies-container">
