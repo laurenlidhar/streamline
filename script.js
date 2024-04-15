@@ -1,6 +1,10 @@
 const apiKey = 'f6175efbecf3aae034aab60572009e5c';
 const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
+function redirectTo(url) {
+    window.location.href = url;
+}
+
 function fetchMovies() {
     fetch(apiUrl)
       .then(response => {
