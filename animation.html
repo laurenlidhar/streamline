@@ -33,6 +33,73 @@
             text-align: center;
             line-height: 25px;
         }
+
+        .animation-movies-container {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .movie {
+        position: relative;
+        width: calc(25% - 20px); /* Adjust the width as needed */
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; 
+        overflow: hidden; 
+        }
+
+        .poster-container {
+        position: relative;
+        width: 100%;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        }
+
+        .poster-container img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease; 
+        }
+
+        .movie-details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0, 0, 0, 0.8); 
+        color: #fff;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-sizing: border-box; 
+        text-align: center;
+        overflow-y: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+        .movie-details {
+            padding: 10px; /* Reduce padding */
+            font-size: 14px; /* Decrease font size */
+        }
+        }
+
+        .movie h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        line-height: 1.2; 
+        }
+
+        .movie:hover .animation-poster-container img {
+        transform: scale(1.1);
+        }
+
+        .movie:hover .movie-details {
+        opacity: 1; 
+        }
     </style>
 
 <script src="script.js"></script>
@@ -40,5 +107,9 @@
 </head>
 <body>
     <h1>Animation Movies</h1>
+
+    <div class="animation-movies-container">
+        <!-- Movie data will be displayed here -->
+    </div>
 </body>
 </html>

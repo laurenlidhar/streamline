@@ -1,6 +1,12 @@
 const apiKey = 'f6175efbecf3aae034aab60572009e5c';
 const popularApiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 const actionApiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=28`;
+const animationApiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=16`;
+const comedyApiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=35`;
+const horrorApiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=27`;
+const romanceApiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=10749`;
+const scifiApiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=878`;
+
 
 function redirectTo(url) {
     window.location.href = url;
@@ -38,6 +44,89 @@ function fetchActionMovies() {
         });
 }
 
+function fetchAnimationMovies() {
+  fetch(animationApiUrl)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          handleMovieData(data, '.animation-movies-container');
+      })
+      .catch(error => {
+          console.error('Error fetching animation movies:', error);
+      });
+}
+
+function fetchComedyMovies() {
+  fetch(comedyApiUrl)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          handleMovieData(data, '.comedy-movies-container');
+      })
+      .catch(error => {
+          console.error('Error fetching comedy movies:', error);
+      });
+}
+
+function fetchHorrorMovies() {
+  fetch(horrorApiUrl)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          handleMovieData(data, '.horror-movies-container');
+      })
+      .catch(error => {
+          console.error('Error fetching horror movies:', error);
+      });
+}
+
+function fetchRomanceMovies() {
+  fetch(romanceApiUrl)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          handleMovieData(data, '.romance-movies-container');
+      })
+      .catch(error => {
+          console.error('Error fetching romance movies:', error);
+      });
+}
+
+function fetchScifiMovies() {
+  fetch(scifiApiUrl)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          handleMovieData(data, '.scifi-movies-container');
+      })
+      .catch(error => {
+          console.error('Error fetching scifi movies:', error);
+      });
+}
+
+
+
+
 function handleMovieData(data, containerSelector) {
     const moviesContainer = document.querySelector(containerSelector);
     moviesContainer.innerHTML = '';
@@ -65,5 +154,10 @@ function handleMovieData(data, containerSelector) {
     });
 }
 
-fetchPopularMovies(); // Fetch popular movies
-fetchActionMovies(); // Fetch action movies
+fetchPopularMovies(); 
+fetchActionMovies(); 
+fetchAnimationMovies();
+fetchComedyMovies();
+fetchHorrorMovies();
+fetchRomanceMovies();
+fetchScifiMovies();
